@@ -98,7 +98,7 @@ export class OverlayView extends React.PureComponent {
     )
     // https://developers.google.com/maps/documentation/javascript/3.exp/reference#MapPanes
     const mapPanes = this.state[OVERLAY_VIEW].getPanes()
-    mapPanes[mapPaneName].appendChild(this.containerElement)
+    mapPanes && mapPanes[mapPaneName].appendChild(this.containerElement)
 
     ReactDOM.unstable_renderSubtreeIntoContainer(
       this,
